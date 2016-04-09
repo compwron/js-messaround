@@ -4,7 +4,6 @@ Experimenting with js and slim
 
 todo:
 
-- multiple pages
 - use sass instead of css
 - modal (from scratch)
 - setup testing framework
@@ -18,3 +17,4 @@ done:
 - import css to slim
 - import js to slim
 - use bootstrap
+- multiple pages
