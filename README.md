@@ -1,13 +1,19 @@
 Experimenting with js and slim
 
+``ruby web.rb``
+
 todo:
 
-css, js, scss
-click something, it disappears, other thing appears
+- multiple pages
+- use sass instead of css
+- modal (from scratch)
+- setup testing framework
+- use (grunt/gulp/bower/?) to get dependencies, package.json
+- setup test coverage framework?
 
-headers on all pages
+done:
 
-modal
-
-setup testing framework
-setup test coverage framework?
+- hook everything into sinatra
+- import css to slim
+- import js to slim
+- use bootstrap

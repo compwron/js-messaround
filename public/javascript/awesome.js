@@ -1,9 +1,9 @@
 $(function(){
   $(".foo").bind("click", function (event) {
-    $("bar").hide();
+    $(".bar").hide();
   });
 
-  $("baz").bind("click", function (event) {
-    $("bar").show();
+  $(".baz").bind("click", function (event) {
+    $(".bar").show();
   });
 });
