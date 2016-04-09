@@ -10,6 +10,7 @@ todo:
 - setup testing framework
 - use (grunt/gulp/bower/?) to get dependencies, package.json
 - setup test coverage framework?
+- setup linting
 
 done:
 
