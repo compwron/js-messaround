@@ -10,6 +10,7 @@ todo:
 - use (grunt/gulp/bower/?) to get dependencies, package.json
 - setup test coverage framework?
 - setup linting
+- search dropdown autocomplete from dictionary?
 
 done:
 

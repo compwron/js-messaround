@@ -1,11 +1,7 @@
 $(function(){
-  $(".pineapple-modal").hide();
+  // $(".pineapple-modal").hide();
 
-  $(".get-pineapple-modal").bind("click", function (event) {
-    $(".pineapple-modal").show();
-  });
-
-  $(".pineapple-modal").bind("click", function (event) {
-    $(".pineapple-modal").hide();
+  $(".pineapple-launcher, .pineapple-background, .pineapple-close").click(function () {
+    $(".pineapple-content, .pineapple-background").toggleClass("active");
   });
 });
