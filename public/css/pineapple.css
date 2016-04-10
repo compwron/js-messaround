@@ -28,3 +28,7 @@
   position: absolute;
   z-index: 1;
 }
+
+#real-modal-thanks-bootstrap {
+  display: none;
+}
