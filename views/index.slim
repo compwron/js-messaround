@@ -18,8 +18,10 @@ body
 a.page-cat href="cat"
   p Cat
 
-.pineapple-launcher
+a.pineapple-launcher
   p Click here to get a modal with a pineapple
+
+
 
 .pineapple-background
 .pineapple-content
@@ -27,27 +29,13 @@ a.page-cat href="cat"
   .pineapple-close
     p Close pineapple
 
-.get-real-modal-thanks-bootstrap
-  p Bootstrap style modal
-#real-modal-thanks-bootstrap
-  p 🍍🍍🍍
 
-button.btn.btn-primary data-toggle="modal" data-target="#myModal"
-  Launch demo modal
+button.btn.btn-primary data-toggle="modal" data-target="#get-real-modal-thanks-bootstrap"
+  Launch Launch the 🍍!
 
-#myModal.modal.fade
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
-      </div>
-      <div class="modal-body">
-        body hi
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div>
-  </div>
+#get-real-modal-thanks-bootstrap.modal.fade
+  .modal-dialog
+    .modal-content
+      .modal-header
+        button.close
+        p 🍍🍍🍍
