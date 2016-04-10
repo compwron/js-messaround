@@ -5,7 +5,6 @@ Experimenting with js and slim
 todo:
 
 - use sass instead of css
-- modal (from scratch)
 - setup testing framework
 - use (grunt/gulp/bower/?) to get dependencies, package.json
 - setup test coverage framework?
@@ -19,3 +18,5 @@ done:
 - import js to slim
 - use bootstrap
 - multiple pages
+- modal (from scratch)
+- modal (from bootstrap)
