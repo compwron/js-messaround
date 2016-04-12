@@ -6,7 +6,7 @@ todo:
 
 - use sass instead of css
 - setup testing framework
-- use (grunt/gulp/bower/?) to get dependencies, package.json
+- use gulp with bower and browserify flugins to download dependencies and minify our code
 - browserify - precompile
 - setup test coverage framework?
 - setup linting
