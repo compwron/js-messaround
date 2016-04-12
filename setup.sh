@@ -9,3 +9,4 @@ npm install --save-dev gulp-tap
 npm install --save-dev gulp-buffer
 npm install --save-dev gulp-sourcemaps
 npm install --save-dev gulp-uglify
+gulp
