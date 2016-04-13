@@ -10,4 +10,8 @@ npm install --save-dev gulp-buffer
 npm install --save-dev gulp-sourcemaps
 npm install --save-dev gulp-uglify
 npm install --save-dev gulp-bower
+npm install --save-dev gulp-autoprefixer
+npm install --save-dev gulp-minify-css
+npm install --save-dev gulp-rename
 gulp
+

@@ -6,14 +6,30 @@ var buffer = require('gulp-buffer');
 var sourcemaps = require('gulp-sourcemaps');
 var uglify = require('gulp-uglify');
 var bower = require('gulp-bower');
+var autoprefixer = require('gulp-autoprefixer');
+var minifyCss = require('gulp-minify-css');
+var rename = require('gulp-rename');
+
+gulp.task('css', function(){
+    return gulp.src('./css/src/style.css')
+        .pipe(autoprefixer('last 2 versions'))
+        .pipe(gulp.dest('./css/'))
+        .pipe(minifyCss())
+        .pipe(rename({extname: '.min.css'}))
+        .pipe(gulp.dest('./css/'));
+});
 
 gulp.task('bower', function() {
   return bower();
 });
 
+gulp.task('log-check', function() {
+  return gutil.log('Gulp is running!')
+});
+
 gulp.task('default', function () {
 
-  return gulp.src('src/**/*.js', {read: false}) // no need of reading file because browserify does.
+  return gulp.src('src/**/*.js', {read: false})
 
     // transform file objects using gulp-tap plugin
     .pipe(tap(function (file) {
