@@ -5,6 +5,11 @@ var tap = require('gulp-tap');
 var buffer = require('gulp-buffer');
 var sourcemaps = require('gulp-sourcemaps');
 var uglify = require('gulp-uglify');
+var bower = require('gulp-bower');
+
+gulp.task('bower', function() {
+  return bower();
+});
 
 gulp.task('default', function () {
 

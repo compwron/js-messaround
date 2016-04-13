@@ -1,6 +1,9 @@
 Experimenting with js and slim
 
-``ruby web.rb``
+````
+gulp bower
+ruby web.rb
+````
 
 todo:
 
@@ -22,6 +25,8 @@ done:
 - multiple pages
 - modal (from scratch)
 - modal (from bootstrap)
+- gulp build
+- bower dependencies import
 
 notes
 
