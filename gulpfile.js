@@ -9,6 +9,19 @@ var bower = require('gulp-bower');
 var autoprefixer = require('gulp-autoprefixer');
 var minifyCss = require('gulp-minify-css');
 var rename = require('gulp-rename');
+var browserify = require('browserify');
+var transform = require('vinyl-transform');
+
+gulp.task('browserify', function () {
+  var browserified = transform(function(filename) {
+    var b = browserify(filename);
+    return b.bundle();
+  });
+
+  return gulp.src(['./public/javascript/*.js'])
+    .pipe(browserified)
+    .pipe(gulp.dest('./dist'));
+});
 
 gulp.task('css', function(){
     return gulp.src('./css/src/style.css')
@@ -29,7 +42,7 @@ gulp.task('log-check', function() {
 
 gulp.task('default', function () {
 
-  return gulp.src('src/**/*.js', {read: false})
+  return gulp.src('public/javascript/**/*.js', {read: false})
 
     // transform file objects using gulp-tap plugin
     .pipe(tap(function (file) {
@@ -50,7 +63,7 @@ gulp.task('default', function () {
     .pipe(uglify())
 
     // write sourcemaps
-    .pipe(sourcemaps.write('./'))
+    .pipe(sourcemaps.write('./browserified_js/'))
 
     .pipe(gulp.dest('dest'));
 

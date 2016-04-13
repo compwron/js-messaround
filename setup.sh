@@ -13,5 +13,6 @@ npm install --save-dev gulp-bower
 npm install --save-dev gulp-autoprefixer
 npm install --save-dev gulp-minify-css
 npm install --save-dev gulp-rename
-gulp
+npm install --save-dev vinyl-transform
+gulp browserify
 
