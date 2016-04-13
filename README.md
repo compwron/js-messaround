@@ -1,6 +1,7 @@
 Experimenting with js and slim
 
 ````
+./setup.sh
 gulp bower
 ruby web.rb
 ````
