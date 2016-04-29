@@ -9,7 +9,7 @@ ruby web.rb
 todo:
 
 - use sass instead of css
-- setup testing framework
+- setup testing framework: jasmine / karma / mocha ?
 - use gulp with bower and browserify flugins to download dependencies and minify our code
 - browserify - precompile
 - setup test coverage framework?
