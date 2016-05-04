@@ -27,8 +27,13 @@ npm install --save-dev eslint-plugin-standard
 npm install --save-dev eslint-config-standard
 npm install --save-dev gulp-eslint
 
+# site dependencies
 npm install -g bower
-bower install jquery --save
+# bower install jquery --save # run install only the first time
+# bower install bootstrap --save
+
+# minification
+npm install gulp-clean-css --save-dev
 
 gulp
 
