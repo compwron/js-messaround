@@ -8,9 +8,6 @@ ruby web.rb
 
 todo:
 
-- use gulp to minify and combine js and css files
-- setup linting as part of gulp
-- hook mocha test run into gulp
 - write meaningful tests in mocha
 - convert to using gulp with webpack to download dependencies and minify our code
 - add source maps for minified and combined js and css
@@ -33,6 +30,9 @@ done:
 - gulp build
 - bower dependencies import
 - setup testing framework (mocha)
+- use gulp to minify and combine js and css files
+- setup linting as part of gulp
+- hook mocha test run into gulp
 
 notes
 
