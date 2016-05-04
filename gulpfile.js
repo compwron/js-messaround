@@ -12,6 +12,12 @@ var rename = require('gulp-rename');
 var browserify = require('browserify');
 var transform = require('vinyl-transform');
 var eslint = require('gulp-eslint');
+const mocha = require('gulp-mocha');
+
+gulp.task('mocha', () => {
+    return gulp.src('test/*test.js', {read: false})
+        .pipe(mocha({reporter: 'nyan'}));
+});
 
 gulp.task('lint', function () {
     // TODO Remove the exclusions for bootstrap and lib after they're no longer checked in
@@ -19,10 +25,6 @@ gulp.task('lint', function () {
         .pipe(eslint())
         .pipe(eslint.format())
         .pipe(eslint.failAfterError());
-});
-
-gulp.task('default', ['lint'], function () {
-    // This will only run if the lint task is successful...
 });
 
 gulp.task('browserify', function () {
@@ -34,15 +36,6 @@ gulp.task('browserify', function () {
   return gulp.src(['./public/javascript/*.js'])
     .pipe(browserified)
     .pipe(gulp.dest('./dist'));
-});
-
-gulp.task('css', function(){
-    return gulp.src('./css/src/style.css')
-        .pipe(autoprefixer('last 2 versions'))
-        .pipe(gulp.dest('./css/'))
-        .pipe(minifyCss())
-        .pipe(rename({extname: '.min.css'}))
-        .pipe(gulp.dest('./css/'));
 });
 
 gulp.task('bower', function() {
