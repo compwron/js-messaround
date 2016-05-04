@@ -27,5 +27,8 @@ npm install --save-dev eslint-plugin-standard
 npm install --save-dev eslint-config-standard
 npm install --save-dev gulp-eslint
 
+npm install -g bower
+bower install jquery --save
+
 gulp
 

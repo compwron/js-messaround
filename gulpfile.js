@@ -27,50 +27,10 @@ gulp.task('lint', function () {
         .pipe(eslint.failAfterError());
 });
 
-gulp.task('browserify', function () {
-  var browserified = transform(function(filename) {
-    var b = browserify(filename);
-    return b.bundle();
-  });
-
-  return gulp.src(['./public/javascript/*.js'])
-    .pipe(browserified)
-    .pipe(gulp.dest('./dist'));
-});
-
 gulp.task('bower', function() {
   return bower();
 });
 
 gulp.task('log-check', function() {
   return gutil.log('Gulp is running!')
-});
-
-gulp.task('default', function () {
-
-  return gulp.src('public/javascript/**/*.js', {read: false})
-
-    // transform file objects using gulp-tap plugin
-    .pipe(tap(function (file) {
-
-      gutil.log('bundling ' + file.path);
-
-      // replace file contents with browserify's bundle stream
-      file.contents = browserify(file.path, {debug: true}).bundle();
-
-    }))
-
-    // transform streaming contents into buffer contents (because gulp-sourcemaps does not support streaming contents)
-    .pipe(buffer())
-
-    // load and init sourcemaps
-    .pipe(sourcemaps.init({loadMaps: true}))
-
-    .pipe(uglify())
-
-    // write sourcemaps
-    .pipe(sourcemaps.write('./browserified_js/'))
-
-    .pipe(gulp.dest('dest'));
-
 });
