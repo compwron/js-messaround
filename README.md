@@ -17,6 +17,8 @@ todo:
 - carousel from scratch?
 - hook mocha test run into gulp
 - write a meaningful test for real existing js functionality
+- use protactor to write end to end tests (protactor is a layer on top of selenium) (see https://git.thoughtworks.net/dmutton/meeting-room-availability/tree/master/e2e-tests)
+
 
 done:
 
