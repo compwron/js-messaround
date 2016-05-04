@@ -8,17 +8,17 @@ ruby web.rb
 
 todo:
 
-- use sass instead of css
-- use gulp with bower and browserify flugins to download dependencies and minify our code
-- browserify - precompile
-- setup test coverage framework?
-- setup linting
-- search dropdown autocomplete from dictionary?
-- carousel from scratch?
+- use gulp to minify and combine js and css files
+- setup linting as part of gulp
 - hook mocha test run into gulp
-- write a meaningful test for real existing js functionality
+- write meaningful tests in mocha
+- convert to using gulp with webpack to download dependencies and minify our code
+- use babel to convert es6 syntax
+- search dropdown autocomplete from dictionary?
+- write a carousel from scratch
+- use sass instead of css
 - use protactor to write end to end tests (protactor is a layer on top of selenium) (see https://git.thoughtworks.net/dmutton/meeting-room-availability/tree/master/e2e-tests)
-
+- use use data-based rendering instead of toggleClass in pineapple.js
 
 done:
 
