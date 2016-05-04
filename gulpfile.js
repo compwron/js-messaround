@@ -12,7 +12,61 @@ var rename = require('gulp-rename');
 var browserify = require('browserify');
 var transform = require('vinyl-transform');
 var eslint = require('gulp-eslint');
-const mocha = require('gulp-mocha');
+var mocha = require('gulp-mocha');
+var cleanCSS = require('gulp-clean-css');
+var concat = require('gulp-concat');
+var uglify = require('gulp-uglify');
+var del = require('del');
+
+gulp.task('clean:public', function () {
+  return del([
+    'public/**/*'
+  ]);
+});
+
+gulp.task('default', ['clean:mobile']);
+
+gulp.task('clean', function() {
+  // delete everything in public/
+});
+
+gulp.task('default', [  'clean:public',
+                        'bower',
+                        'lint',
+                        'javascript',
+                        'vendor-js',
+                        'vendor-bootstrap',
+                        'css',
+                        'mocha',
+                        ], function() {
+  return gutil.log('Default: clean, get dependencies, lint, compress javascript and css, run tests')
+});
+
+gulp.task('javascript', function() {
+  return gulp.src('src/js/**/*.js')
+    .pipe(concat('all.min.js'))
+    .pipe(uglify())
+    .pipe(gulp.dest('public'));
+});
+
+gulp.task('vendor-js', function() {
+  return gulp.src(['bower_components/jquery/dist/jquery.min.js'])
+    .pipe(concat('vendor.min.js'))
+    .pipe(uglify())
+    .pipe(gulp.dest('public'));
+});
+
+gulp.task('vendor-bootstrap', function() {
+  return gulp.src(['bower_components/bootstrap/dist/**/*.*'], { base: './bower_components' })
+    .pipe(gulp.dest('public'));
+});
+
+gulp.task('css', function() {
+  return gulp.src('src/css/**/*.css')
+    .pipe(concat('all.min.css'))
+    .pipe(cleanCSS({compatibility: 'ie8'}))
+    .pipe(gulp.dest('public'));
+});
 
 gulp.task('mocha', () => {
     return gulp.src('test/*test.js', {read: false})
@@ -34,3 +88,5 @@ gulp.task('bower', function() {
 gulp.task('log-check', function() {
   return gutil.log('Gulp is running!')
 });
+
+// ruby bower and move the results to public and minify them

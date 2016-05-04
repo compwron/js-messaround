@@ -1,0 +1,1 @@
+.foo{color:green}.pineapple-background,.pineapple-content{display:none}.pineapple-background.active{display:block;background-color:#000;opacity:.7;position:fixed;top:0;left:0;bottom:0;right:0;overflow:auto}.pineapple-content.active{display:block;background-color:#fff;padding:10px;left:20%;top:20%;position:absolute;z-index:1}

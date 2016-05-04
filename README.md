@@ -13,6 +13,7 @@ todo:
 - hook mocha test run into gulp
 - write meaningful tests in mocha
 - convert to using gulp with webpack to download dependencies and minify our code
+- add source maps for minified and combined js and css
 - use babel to convert es6 syntax
 - search dropdown autocomplete from dictionary?
 - write a carousel from scratch

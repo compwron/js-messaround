@@ -33,7 +33,9 @@ npm install -g bower
 # bower install bootstrap --save
 
 # minification
+npm install gulp-concat --save-dev
 npm install gulp-clean-css --save-dev
+npm install gulp-uglify --save-dev
 
 gulp
 

@@ -3,3 +3,4 @@ node_modules/
 dest/
 .idea/
 bower_components/
+dist/
