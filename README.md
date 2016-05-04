@@ -9,13 +9,14 @@ ruby web.rb
 todo:
 
 - use sass instead of css
-- setup testing framework: jasmine / karma / mocha ?
 - use gulp with bower and browserify flugins to download dependencies and minify our code
 - browserify - precompile
 - setup test coverage framework?
 - setup linting
 - search dropdown autocomplete from dictionary?
 - carousel from scratch?
+- hook mocha test run into gulp
+- write a meaningful test for real existing js functionality
 
 done:
 
@@ -28,6 +29,7 @@ done:
 - modal (from bootstrap)
 - gulp build
 - bower dependencies import
+- setup testing framework (mocha)
 
 notes
 

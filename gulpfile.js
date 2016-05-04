@@ -11,6 +11,13 @@ var minifyCss = require('gulp-minify-css');
 var rename = require('gulp-rename');
 var browserify = require('browserify');
 var transform = require('vinyl-transform');
+var jslint = require('gulp-jslint');
+
+gulp.task('lint', function () {
+    return gulp.src(['source.js'])
+            .pipe(jslint({ /* this object represents the JSLint directives being passed down */ }))
+            .pipe(jslint.reporter('default', errorsOnly));
+});
 
 gulp.task('browserify', function () {
   var browserified = transform(function(filename) {
