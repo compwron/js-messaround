@@ -1,7 +1,4 @@
-var assert = require('chai').assert;
-require('../bower_components/jquery/dist/jquery.js')
-var subject = require('../src/js/pineapple.js')
-var pineappleCount = require('../src/js/pineapple.js').pineappleCount
+var Pineapple = require('../src/js/pineapple.js')
 
 describe('pineapple', function() {
   // it('should show pineapple modal when the pineapple button is clicked', function () {
@@ -10,6 +7,6 @@ describe('pineapple', function() {
   //   assert.equal($('.pineapple-background').is(":visible"), true);
   // });
   it('should show pineapple count', function () {
-    assert.equal(pineappleCount(), 42);
+    assert.equal(Pineapple.pineappleCount(), 42);
   });
 });
