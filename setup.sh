@@ -21,6 +21,7 @@ npm install --save-dev vinyl-transform
 npm install --save-dev chai
 npm install --save-dev mocha
 npm install --save-dev gulp-mocha
+npm install --save-dev jsdom
 
 # linting
 npm install --save-dev eslint-plugin-standard

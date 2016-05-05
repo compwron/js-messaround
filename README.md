@@ -15,6 +15,8 @@ todo:
 - search dropdown autocomplete from dictionary?
 - write a carousel from scratch
 - use sass instead of css
+- use Angular 2 (remove other frameworks present or use a different repo)
+- Use React (remove other frameworks present or use a different repo)
 - use protactor to write end to end tests (protactor is a layer on top of selenium) (see https://git.thoughtworks.net/dmutton/meeting-room-availability/tree/master/e2e-tests)
 - use use data-based rendering instead of toggleClass in pineapple.js
 
