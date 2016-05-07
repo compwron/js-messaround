@@ -8,6 +8,7 @@ ruby web.rb
 
 todo:
 
+- set up the CI build with several different services. travis, circleci, snap, ...windows?
 - write meaningful tests in mocha
 - convert to using gulp with webpack to download dependencies and minify our code
 - add source maps for minified and combined js and css
@@ -17,8 +18,11 @@ todo:
 - use sass instead of css
 - use Angular 2 (remove other frameworks present or use a different repo)
 - Use React (remove other frameworks present or use a different repo)
-- use protactor to write end to end tests (protactor is a layer on top of selenium) (see https://git.thoughtworks.net/dmutton/meeting-room-availability/tree/master/e2e-tests)
+- use protractor to write end to end tests (protactor is a layer on top of selenium) (see https://git.thoughtworks.net/dmutton/meeting-room-availability/tree/master/e2e-tests)
 - use use data-based rendering instead of toggleClass in pineapple.js
+- security fuzzing, maybe using https://github.com/wendyi/continuousSecurityCi
+- do that thing where you change the tab based on how many messages there are - blinky tab
+- environmental variables / pipeline difference for dev/prod
 
 done:
 

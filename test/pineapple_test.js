@@ -1,12 +1,29 @@
-var Pineapple = require('../src/js/pineapple.js')
+// var Pineapple = require('../src/js/pineapple.js')
 
-describe('pineapple', function() {
-  // it('should show pineapple modal when the pineapple button is clicked', function () {
-  //   $('.pineapple-launcher').click();
-  //   assert.equal($('.pineapple-content').is(":visible"), true);
-  //   assert.equal($('.pineapple-background').is(":visible"), true);
-  // });
-  it('should show pineapple count', function () {
-    assert.equal(Pineapple.pineappleCount(), 42);
-  });
-});
+// describe('pineapple', function() {
+//   it('should show pineapple modal when the pineapple button is clicked', function () {
+//     $('.pineapple-launcher').click();
+//     assert.equal($('.pineapple-content').is(":visible"), true);
+//     assert.equal($('.pineapple-background').is(":visible"), true);
+//   });
+
+//   it('should show pineapple count', function () {
+//     assert.equal(Pineapple.pineappleCount(), 42);
+//   });
+// });
+
+describe('mocha tests', function () {
+
+  var $
+  require('jsdom').jsdom()
+
+  before(function () {
+    $ = require('jquery')
+  })
+
+  it('works', function () {
+    document.body.innerHTML = '<div>hola</div>'
+    expect($("div").html()).eql('hola')
+  })
+
+})

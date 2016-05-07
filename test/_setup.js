@@ -1,5 +1,10 @@
-global.document = require('jsdom').jsdom('<html></html>');
+global.jsdom = require('jsdom');
+global.document = jsdom.jsdom('<html></html>');
 global.window = document.defaultView;
-global.$ = require('jquery')(window);
-global.assert = require('chai').assert;
+
+global.chai = require('chai');
+global.assert = chai.assert;
+global.expect = chai.expect;
+global.should = chai.should();
+
 console.log("Loaded mocha setup")
