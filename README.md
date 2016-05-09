@@ -1,4 +1,6 @@
-Experimenting with js and slim
+### Experimenting with js and slim
+
+[![Build Status](https://travis-ci.org/compwron/js-messaround.svg?branch=master)](https://travis-ci.org/compwron/js-messaround)
 
 ````
 ./setup.sh
